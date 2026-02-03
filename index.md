@@ -1,47 +1,3 @@
-<style>
-body {
-  display: flex;
-  margin: 0;
-  font-family: sans-serif;
-}
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  background-color: #f0f0f0;
-  padding: 20px;
-  overflow-y: auto;
-  border-right: 1px solid #ccc;
-}
-.sidebar a {
-  display: block;
-  padding: 10px 0;
-  color: #333;
-  text-decoration: none;
-}
-.sidebar a:hover {
-  background-color: #ddd;
-}
-.content {
-  margin-left: 220px; 
-  padding: 20px;
-}
-</style>
-
-<div class="sidebar">
-  <h3>Labs</h3>
-  <a href="#lab1">Lab 1A</a>
-  <a href="#lab2">Lab 1B</a>
-  <a href="#lab3">Lab 2</a>
-</div>
-
-<div class="content">
-
-
-
-
 <p align="center">
   <img src="images/profile_photo.jpg" width="150">
 </p>
@@ -94,7 +50,7 @@ This page will be used to share my coursework in Fast Robots. I hope this page c
 
 ---
 
-## Lab 1A {#lab1A}
+## Lab 1A
 
 ### Task 1: Connect Artemis board to the computer
 First, I hooked the Artemis board up to my laptop. Then I clicked on port selection on the top left corner of Arduino IDE window, and clicked on the COM port that shows up. For me it is COM7; if you have trouble detecting your chip, try a different port on your device.  
@@ -192,4 +148,4 @@ You should see the Serial Monitor continuously outputting the **loudest frequenc
   </video>
 </p>
 
-## Lab 1B {#lab1B}
+## Lab 1B 
