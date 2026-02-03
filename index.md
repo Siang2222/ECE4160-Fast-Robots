@@ -1,3 +1,34 @@
+<style>
+/* 固定左侧导航 */
+#jump-nav {
+  position: fixed;
+  top: 20px;     /* 离顶部 20px */
+  left: 10px;    /* 离左边 10px */
+  width: 120px;  /* 可调宽度 */
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#jump-nav a {
+  display: block;
+  margin: 5px 0;
+  color: #333;
+  text-decoration: none;
+}
+#jump-nav a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<div id="jump-nav">
+  <strong>Jump to:</strong>
+  <a href="#lab1">Lab 1</a>
+  <a href="#lab2">Lab 2</a>
+  <a href="#lab3">Lab 3</a>
+</div>
+
 <p align="center">
   <img src="images/profile_photo.jpg" width="150">
 </p>
