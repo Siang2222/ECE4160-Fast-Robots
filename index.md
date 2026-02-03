@@ -3,7 +3,7 @@
   position: fixed;
   top: 240px;    
   left: 120px;   
-  width: 240px;  
+  width: 360px;  
   font-family: sans-serif;
   background-color: #f8f8f8;
   padding: 10px;
@@ -23,7 +23,7 @@
 
 <div id="jump-nav">
   <strong>Jump to:</strong>
-  <a href="#lab1">Lab 1</a>
+  <a href="#lab1">Lab 1: The Artemis Board and Bluetooth</a>
   <a href="#lab2">Lab 2</a>
   <a href="#lab3">Lab 3</a>
 </div>
