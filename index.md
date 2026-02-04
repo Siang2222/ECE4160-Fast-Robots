@@ -52,29 +52,25 @@ This page will be used to share my coursework in Fast Robots. I hope this page c
 
 1. Get Arduino IDE at [Arduino IDE](https://docs.arduino.cc/software/ide/)  
 2. Open Arduino IDE → **File → Preferences → Additional Boards Manager URLs**  
-
-  <p align="center">
-    <img src="images/lab1/1.png" width="400">
-  </p>
+<p align="center">
+  <img src="images/lab1/1.png" width="400">
+</p>
 
 3. Paste the following URL in a separate line (if you have previously added other files) and save changes:  
 <code>https://raw.githubusercontent.com/sparkfun/Arduino_Apollo3/main/package_sparkfun_apollo3_index.json</code>
-
-  <p align="center">
-    <img src="images/lab1/2.png" width="400">
-  </p>
+<p align="center">
+  <img src="images/lab1/2.png" width="400">
+</p>
 
 4. Go to **Tools → Board → Board Manager**  
-
-  <p align="center">
-    <img src="images/lab1/3.png" width="400">
-  </p>
+<p align="center">
+  <img src="images/lab1/3.png" width="400">
+</p>
 
 5. Search **“Apollo3”** and install **SparkFun Apollo3 Boards**  
-
-  <p align="center">
-    <img src="images/lab1/4.png" width="400">
-  </p>
+<p align="center">
+  <img src="images/lab1/4.png" width="400">
+</p>
 
 > Till now, we have completed all preparations for Lab 1A.
 
