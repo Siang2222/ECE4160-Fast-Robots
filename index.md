@@ -178,4 +178,139 @@ You should see the Serial Monitor continuously outputting the **loudest frequenc
   </video>
 </p>
 
-## Lab 1B 
+## Prelab
+
+1. Check current installed Python and pip version with terminal command:
+
+    ```bash
+    python3 --version
+    python3 -m pip --version
+    ```
+
+    If `python3` does not work, try `python`, and switch all later `python3` commands into `python`:
+
+    ```bash
+    python --version
+    python -m pip --version
+    ```
+
+2. Upgrade/downgrade Python to **3.10–3.13**.  
+> Remember to select the **"Add Python to Path"** option in the installer.  
+> **DO NOT** update to Python 3.14, there is an async issue with Bleak and the lab codebase.
+
+3. Upgrade to the latest version of pip. In terminal, type:
+
+    ```bash
+    python3 -m pip install --upgrade pip
+    ```
+
+4. Install `venv`:
+
+    ```bash
+    python3 -m pip install --user virtualenv
+    ```
+
+5. Create a project folder for this course in a convenient location.  
+For example, my folder is called `FR`. Right-click inside this folder and open the terminal. Then enter:
+
+    ```bash
+    python3 -m venv FastRobots_ble
+    ```
+
+    > A folder named `FastRobots_ble` should be created.
+
+6. In the same terminal, enter the following to activate the virtual environment:
+
+    ```bash
+    .\FastRobots_ble\Scripts\activate
+    ```
+
+7. Your CLI prompt should now have the prefix `(FastRobots_ble)`.
+
+<p align="center">
+  <img src="images/lab1/10.png" width="400">
+</p>
+
+> To exit this virtual environment, enter `deactivate`. Do not do it for now.
+
+8. To install packages inside this virtual environment, enter:
+
+    ```bash
+    pip install numpy pyyaml colorama nest_asyncio bleak jupyterlab
+    ```
+
+9. Download the Lab Codebase: [ble_robot_1.4.zip](https://fastrobotscornell.github.io/FastRobots-2026/labs/ble_robot_1.4.zip)
+
+10. After extracting, copy the `ble_robot_1.4` folder into the same directory as `FastRobots_ble`.  
+> Your project folder should now contain both folders.
+
+11. In the terminal, enter:
+
+    ```bash
+    jupyter lab
+    ```
+
+> Make sure the virtual environment is activated. A browser tab should open up.
+
+12. Open Arduino IDE, go to **Tools → Manage Libraries**, type `ArduinoBLE` in the search bar, and install the one published by Arduino.
+
+<p align="center">
+  <img src="images/lab1/11.png" width="400">
+</p>
+
+<p align="center">
+  <img src="images/lab1/12.png" width="400">
+</p>
+
+13. Go to `project_file/ble_robot_1.4/ble_arduino`, load and upload the sketch `ble_arduino.ino` to your board.  
+> You should see the MAC address of your Artemis board being printed in the Serial Monitor.
+
+<p align="center">
+  <img src="images/lab1/13.png" width="400">
+</p>
+
+14. In Jupyter Lab, open `connection.yaml`, replace `artemis_address` with the MAC address shown in Arduino Serial Monitor.
+
+<p align="center">
+  <img src="images/lab1/14.png" width="400">
+</p>
+
+15. Go to `demo.ipynb` in Jupyter Lab and run the first code cell.  
+> You can press Shift+Enter to run a selected code cell.  
+> Every time you restart Jupyter Lab, always remember to run this code block.
+
+<p align="center">
+  <img src="images/lab1/15.png" width="400">
+</p>
+
+16. Create a new code cell right below and type in the following two lines:
+
+    ```python
+    from uuid import uuid4
+    uuid4()
+    ```
+
+> Run the code block and you should see your UUID.  
+
+17. Go to `connection.yaml`, replace `ble_service` with the new UUID.
+
+<p align="center">
+  <img src="images/lab1/16.png" width="400">
+</p>
+
+18. In `ble_arduino.ino`, replace `BLE_UUID_TEST_SERVICE` with the new UUID.
+
+<p align="center">
+  <img src="images/lab1/17.png" width="400">
+</p>
+
+19. Re-upload `ble_arduino.ino` on the Artemis board.
+
+20. Run through all the cells in `demo.ipynb`.
+
+> Note: You **DO NOT** need to regenerate a new UUID every time you upload a new `ble_arduino.ino`, but you will need to run the above cell to reconnect.
+
+<p align="center">
+  <img src="images/lab1/18.png" width="400">
+</p>
+
