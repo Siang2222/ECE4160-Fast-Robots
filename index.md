@@ -323,9 +323,9 @@ For example, my folder is called `FR`. Right-click inside this folder and open t
 ## Tasks 1: send and receive string
 Activate the virtual environment and start Jupyter Lab. In ble_arduino.ino, locate case ECHO: and observe that the text sent from Python is already stored in char_arr. By adding Serial.print / Serial.println, the goal could be easily achieved. Then, rerun Prelab Step 20 in demo.ipynb to reconnect to the Artemis board. Finally, run
 
-    ```bash
-    ble.send_command(CMD.ECHO, "HIHELLO")
-    ```
+  ```bash
+  ble.send_command(CMD.ECHO, "HIHELLO")
+  ```
 
 in **demo.ipynb; you should see the output in the Arduino IDE Serial Monitor.**
 
@@ -338,9 +338,9 @@ in **demo.ipynb; you should see the output in the Arduino IDE Serial Monitor.**
 ## Tasks 2: SEND_THREE_FLOATS
 Look at case SEND_TWO_INTS:; this makes it easy to understand how to write SEND_THREE_FLOATS. The only difference is that the local variables we define should be float instead of int. Finally, reconnect to the Artemis board， and run
 
-    ```bash
-    ble.send_command(CMD.SEND_THREE_FLOATS, "2.2|3.3|4.4")
-    ```
+  ```bash
+  ble.send_command(CMD.SEND_THREE_FLOATS, "2.2|3.3|4.4")
+  ```
 
 You can use any three floats you like. you should see the output in the Arduino IDE Serial Monitor.
 
@@ -355,11 +355,11 @@ Note that neither cmd_types.py nor ble_arduino.ino currently include the GET_TIM
 
 In cmd_types.py, add three lines:
 
-    ```bash
-    GET_TIME_MILLIS = 6
-    SEND_TIME_DATA = 7
-    GET_TEMP_READINGS = 8
-    ```
+  ```bash
+  GET_TIME_MILLIS = 6
+  SEND_TIME_DATA = 7
+  GET_TEMP_READINGS = 8
+  ```
 
 <p align="center">
   <img src="images/lab1/21.png" width="400">
@@ -367,11 +367,11 @@ In cmd_types.py, add three lines:
 
 In ble_arduino.ino, locate the enum CommandTypes and add:
 
-    ```bash
-    GET_TIME_MILLIS,
-    SEND_TIME_DATA,
-    GET_TEMP_READINGS,
-    ```
+  ```bash
+  GET_TIME_MILLIS,
+  SEND_TIME_DATA,
+  GET_TEMP_READINGS,
+  ```
 
 <p align="center">
   <img src="images/lab1/22.png" width="400">
@@ -384,11 +384,11 @@ In case PING, you can see the code pattern to use and call millis(). Following t
 
 Upload and reconnect, in demo.ipynb, create a new cell block and enter
 
-    ```bash
-    ble.send_command(CMD.GET_TIME_MILLIS, "")
-    s = ble.receive_string(ble.uuid['RX_STRING'])
-    print(s)
-    ```
+  ```bash
+  ble.send_command(CMD.GET_TIME_MILLIS, "")
+  s = ble.receive_string(ble.uuid['RX_STRING'])
+  print(s)
+  ```
 
 Run this code block and you should see
 
