@@ -222,7 +222,6 @@ For example, my folder is called `FR`. Right-click inside this folder and open t
     ```
 
 7. Your CLI prompt should now have the prefix `(FastRobots_ble)`.
-
 <p align="center">
   <img src="images/lab1/10.png" width="400">
 </p>
@@ -249,24 +248,20 @@ For example, my folder is called `FR`. Right-click inside this folder and open t
 > Make sure the virtual environment is activated. A browser tab should open up.
 
 12. Open Arduino IDE, go to **Tools → Manage Libraries**, type `ArduinoBLE` in the search bar, and install the one published by Arduino.
-
 <p align="center">
   <img src="images/lab1/11.png" width="400">
 </p>
-
 <p align="center">
   <img src="images/lab1/12.png" width="400">
 </p>
 
 13. Go to `project_file/ble_robot_1.4/ble_arduino`, load and upload the sketch `ble_arduino.ino` to your board.  
 > You should see the MAC address of your Artemis board being printed in the Serial Monitor.
-
 <p align="center">
   <img src="images/lab1/13.png" width="400">
 </p>
 
 14. In Jupyter Lab, open `connection.yaml`, replace `artemis_address` with the MAC address shown in Arduino Serial Monitor.
-
 <p align="center">
   <img src="images/lab1/14.png" width="400">
 </p>
@@ -274,7 +269,6 @@ For example, my folder is called `FR`. Right-click inside this folder and open t
 15. Go to `demo.ipynb` in Jupyter Lab and run the first code cell.  
 > You can press Shift+Enter to run a selected code cell.  
 > Every time you restart Jupyter Lab, always remember to run this code block.
-
 <p align="center">
   <img src="images/lab1/15.png" width="400">
 </p>
@@ -289,13 +283,11 @@ For example, my folder is called `FR`. Right-click inside this folder and open t
 > Run the code block and you should see your UUID.  
 
 17. Go to `connection.yaml`, replace `ble_service` with the new UUID.
-
 <p align="center">
   <img src="images/lab1/16.png" width="400">
 </p>
 
 18. In `ble_arduino.ino`, replace `BLE_UUID_TEST_SERVICE` with the new UUID.
-
 <p align="center">
   <img src="images/lab1/17.png" width="400">
 </p>
@@ -305,7 +297,6 @@ For example, my folder is called `FR`. Right-click inside this folder and open t
 20. Run through all the cells in `demo.ipynb`.
 
 > Note: You **DO NOT** need to regenerate a new UUID every time you upload a new `ble_arduino.ino`, but you will need to run the above cell to reconnect.
-
 <p align="center">
   <img src="images/lab1/18.png" width="400">
 </p>
