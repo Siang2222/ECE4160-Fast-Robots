@@ -37,41 +37,7 @@ This page will be used to share my coursework in Fast Robots. I hope this page c
 > ⚠️ **Note:** I am using **Windows 11**. If your system is different, check what applies to your system.
 
 # Lab 1: The Artemis Board and Bluetooth {#lab1}
-
-
-
-
-
-<!-- 隐藏 Lab 1 内容 -->
-<style>
-  /* 隐藏 Lab 1 所有元素 */
-  #lab1, #lab1 ~ * {
-    display: none;
-  }
-
-  /* 显示占位信息 */
-  #lab1-placeholder {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    padding: 20px;
-    background-color: #fff3cd;
-    border: 1px solid #ffeeba;
-    border-radius: 5px;
-    margin: 20px 0;
-    font-size: 1.1em;
-  }
-</style>
-
-<!-- 占位信息 -->
-<div id="lab1-placeholder">
-  LAB1内容正在根据反馈进行调整，稍后再次发布。
-</div>
-
-
-
-
-
+<div style="display:none">
 ## Parts
 - SparkFun RedBoard Artemis Nano × 1  
 - USB-C cable × 1  
@@ -477,3 +443,8 @@ This is because each time a time stamp is sent, BLE has to perform a GATT write/
 ## Discussion
 In Lab 1A, we mainly installed the SparkFun Apollo drivers and became familiar with the basic operations of the Arduino IDE, including understanding the serial monitor and baud rate. In Lab 1B, we performed simple BLE communication between Python and the board, and learned that each GATT write/notify has a fixed overhead, so sending data in batches can spread the overhead across more data, thereby increasing the transfer rate.
 
+</div>
+
+<div style="text-align:center; font-weight:bold; padding:20px; background-color:#fff3cd; border:1px solid #ffeeba; border-radius:5px;">
+LAB1 content is currently being updated based on feedback and will be published again shortly.
+</div>
