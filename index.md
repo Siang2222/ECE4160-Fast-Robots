@@ -460,11 +460,11 @@ LAB1 content is currently being updated based on feedback and will be published 
 ## Set up the IMU
 In Lab 2, I first connected the IMU to the Artemis Nano. The connection is shown below:
 
-![IMU connection placeholder](images/lab2/imu_connection.jpg)
+*Connection image temporarily not available*
 
 Using the example code from the **ICM20948 library**, the IMU runs correctly, as shown here:
 
-![Example code output placeholder](images/lab2/example_output.jpg)
+![Example code output](images/lab2/example.png)
 
 The `AD0_VAL` pin determines the I2C address. When multiple identical devices are connected to the same I2C bus, this value must be modified to differentiate the hardware.
 
@@ -489,7 +489,7 @@ Since gravity is always vertical, the accelerometer cannot measure yaw.
 
 For testing purposes, I output the calculated pitch/roll in `pitch,roll` format so it can be observed in the Serial Plotter. I tilted the IMU along the +pitch and +roll directions and observed the following:
 
-![Pitch/Roll visualization placeholder](images/lab2/pitch_roll_plot.jpg)
+![Pitch/Roll visualization](images/lab2/show_acc_working.png)
 
 ---
 
@@ -520,7 +520,7 @@ S = \frac{32768}{az\_pos - az\_neg}
 
 These values quantify the accelerometer’s systematic error and measurement accuracy. The computed scale factor and bias are shown below:
 
-![Scale factor and bias placeholder](images/lab2/scale_bias.jpg)
+![Accelerometer error](images/lab2/acc_error.png)
 
 The errors are small enough that I did not apply scaling or bias correction to the accelerometer readings.
 
@@ -530,12 +530,12 @@ The errors are small enough that I did not apply scaling or bias correction to t
 
 I manually extracted a segment of the IMU jitter from the Serial Monitor and created a Python script to analyze its frequency domain. Using 95% of the signal energy as the cutoff frequency, I obtained the following:
 
-![Frequency analysis placeholder 1](images/lab2/freq_analysis1.jpg)  
-![Frequency analysis placeholder 2](images/lab2/freq_analysis2.jpg)  
-![Frequency analysis placeholder 3](images/lab2/freq_analysis3.jpg)
+![X-axis FFT](images/lab2/xfft.png)  
+![Y-axis FFT](images/lab2/yfft.png)  
+![Z-axis FFT](images/lab2/zfft.png)
 
-Using these three cutoff frequencies, I designed a low-pass filter for the accelerometer. Testing with 90% energy as cutoff still showed noticeable noise in the Serial Plotter. Using 95% energy produced good results.  
+Using these cutoff frequencies, I designed a low-pass filter for the accelerometer. Testing with 90% energy as cutoff still showed noticeable noise in the Serial Plotter. Using 95% energy produced good results.  
 
 In the plot below, the **blue line** is the filtered accelerometer data, and the **orange line** is unfiltered:
 
-![Filtered vs unfiltered accelerometer data placeholder](images/lab2/filter_comparison.jpg)
+![Low-pass vs raw](images/lab2/lowpass_vs_raw.png)
